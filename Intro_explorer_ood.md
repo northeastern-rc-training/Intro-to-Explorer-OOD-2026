@@ -31,6 +31,8 @@ Explorer is Northeastern's HPC system and is managed by Research Computing. Expl
 
 Explorer is connected to the university network over 10 Gbps Ethernet (GbE) for high-speed data transfer, and Explorer provides 6 PB of available storage on a high-performance file system. Compute nodes are connected with either 10 GbE or high data rate InfiniBand (200 Gbps or 100 Gbps), supporting all types and scales of computational workloads.
 
+You can learn more about Explorer and the Research Computing team at our [Research Computing website](https://rc.northeastern.edu/) and in our [cluster usage documentation](https://rc-docs.northeastern.edu/en/latest/index.html) which has guides for logging in, running jobs, creating conda environments, using GPUs, and more!
+
 ## How to get an account on Explorer
 
 We require all users of Explorer to have membership in a PI/Staff owned storage space.
@@ -100,11 +102,16 @@ You're now on the cluster!
 
 Now that you are on the cluster we should talk about files paths. You will learn more about these in our Intro to Linux training session (Feb 24th at 11 AM EST). but it's worth discussing a little now.
 
-All users have read and write access to three spaces on the cluser:
+All users have read and write access to these spaces on the cluser:
 
 `/home`
 `/scratch`
+
+If you are using the cluster for research, you will also have a space in:
+
 `/projects`
+
+If you are taking a course on the cluster you will have access to `/courses` and may not have access to `/projects`
 
 When setting the path to these locations we recommend writing the full absolute file path, which means the path will always start with `/`. We'll have some examples of using files paths in the next session on transfering data.
 
@@ -115,8 +122,14 @@ One of the first things you may need to do is transfer data or scripts to the cl
 We should first consider the space limitations on the cluster before we transfer files.
 
 Your `/home` directory is limited to 75 GBs.
+
 Your `/scratch` directory is limited to 50 TB (but is purged each month, so not good for long-term storage).
+
 Your `/projects` space is best for long-term storage of data or scripts that are large or contain many small files.
+
+Your `/courses` directory (if you are taking a course on the cluster) can hold from 1-5 TB depending on what your instructor has requested. This space is shared among the whole class.
+
+> Your quota can quickly reach capacity and you will then get an error message saying "quota exceeded". This can happen particulalriy quickly in `/home` as it has the smallest limit. Please see [our documentation](https://rc-docs.northeastern.edu/en/latest/best-practices/homequota.html) for tips to stay under the quota and what to do when you exceed it.
 
 If you have many small files to transfer we recommend compressing them (via the commands `zip` or `tar`) prior to transfering them.
 
@@ -140,6 +153,7 @@ Let's create a small test file to transfer to the cluster
 touch testfile.txt
 echo "hello from the Explorer cluster" > testfile.txt
 ```
+
 And then transfer it to the cluster with `scp`. 
 
 The command `scp` needs to know what you want to copy, and where you want to copy it.
@@ -155,6 +169,7 @@ I can then login to the cluster and see if that file is present with the command
 ```bash
 ssh s.caplins@login.explorer.northeastern.edu
 ```
+
 ### Transfer a file on the OOD with the files application
 
 Login to the Open OnDemand website: https://ood.explorer.northeastern.edu
@@ -173,7 +188,7 @@ If you select upload a popup window will open and you can choose to browse files
 
 <img src="screenshot_files3.png" alt="drawing" width="400" class="center"/>
 
-Note: the files application is limited to transferes of 10 GB. If you have larger files use scp or for very large files/datasets we recommend you use [Globus](https://rc-docs.northeastern.edu/en/latest/datamanagement/globus.html#using-globus)
+> The files application is limited to transferes of 10 GB. If you have larger files use scp or for very large files/datasets we recommend you use [Globus](https://rc-docs.northeastern.edu/en/latest/datamanagement/globus.html#using-globus)
 
 And of course large datasets should be stored in `/projects` or for temporary storage `/scratch`
 
@@ -181,9 +196,64 @@ And of course large datasets should be stored in `/projects` or for temporary st
 
 Now that you can transfer data to the cluster, let's discuss running jobs. So far we have used the login nodes and the xfer transer nodes, but to do larger computational tasks we should learn how to get on a compute node.
 
+<img src="testwhite.svg" alt="drawing" width="400"/>
+
+> Please don't run scientific software, transfer large files, or carry out computations on the login nodes. Login node traffic can acculate and slow down the whole system for all users.
+
+### The commands `srun` and `sbatch`
+
 When you're on the terminal you can use the command `srun`to access a compute node.
 
 The command `srun` is a slurm command and it has several parameters that allow you to ask for specifc amounts of memory, time, and cpu-cores among other options.
+
+There are also defaults set so you can quickly access a node when needed.
+
+This is the most simple command that you can run to get a compute node from the terminal. This can only be run from a login node.
+
+```bash
+srun --pty bash
+```
+This command gets us the defaults: 4 hours, 1 node, 1 task (or thread/cpu core), 2 GB or memory, and 2 CPUs all on the short partition.
+
+But there are other flags that we can use to request more time, cpus, or memory.
+
+Here is an example asking for more of all of the parameters available:
+
+```bash
+
+srun --time=6:00:00 --mem=50GB --ntasks=16 --partition=short --pty bash
+```
+
+And the same command, but using the short form of all the flags.
+
+```bash
+
+```
+
+One important option to learn in `srun` is the partition.
+
+## Partitions (a short detour)
+
+A partition is a way for the Research Computing team to logically organize the nodes on the cluster and the resources that can be requested. Partitions usually vary by the amount of time that can be requested or by the number of nodes, and the type of resources (CPU or GPU). its a way for Research Computing to manage the resources so everyone can run their jobs.
+
+On the Explorer cluster we have several partitions including:
+
+| CPU      | GPU  |
+| -----    | ---- |
+| short (default)    | gpu  |
+| courses  | courses-gpu |
+| sharing  | sharing |
+|          | gpu-interactive |
+|          | gpu-short |
+
+| Need to apply for access |
+|----|
+| long |
+|multigpu|
+
+If you need access to long or multigpu you can [apply here]([https://bit.ly/NURC-PartitionAccess](https://bit.ly/NURC-PartitionAccess)). We just ask to see that you have optimized your code and are able to use those additional resources effectively.
+
+
 
 ## Check job status
 
