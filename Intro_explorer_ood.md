@@ -3,7 +3,7 @@
 ---
 # Research Computing Training
 
-<img src="ac-grid-5-red.svg" alt="drawing" width="900"/>
+<img src="images/ac-grid-5-red.svg" alt="drawing" width="900"/>
 
 ## Introduction to Explorer and the OOD
 
@@ -24,7 +24,7 @@ Today this presentation will cover:
 
 High-Performance Computing (HPC) refers to the practice of using a large cluster of computers together to solve complex problems that are beyond the capability of a single desktop computer.
 
-<img src="testwhite.svg" alt="drawing" width="800"/>
+<img src="images/testwhite.svg" alt="drawing" width="800"/>
 
 Researchers and students can login to the HPC via a login node. On the login node work of low computational need can be performed (for example, editing files). When more computational power is needed the work needs to be moved to a compute node. We use the scheduler [SLURM](https://slurm.schedmd.com/documentation.html) (Simple Linux Utility for Resource Management) to manage researchers requests for compute nodes.
 
@@ -32,7 +32,7 @@ Researchers and students can login to the HPC via a login node. On the login nod
 
 Explorer is Northeastern's HPC system and is managed by the Research Computing team. Explorer supercedes the Discovery cluster. We have 45,000 CPU cores and over 525 GPUs available to all Northeastern faculty and students free of charge. The Explorer cluster is loacated at the [Massachusetts Green High Performance Computing Center](https://www.mghpcc.org/) (MGHPCC) in Holyoke, MA.
 
-<img src="MGHPCC-1.jpg" alt="drawing" width="800"/>
+<img src="images/MGHPCC-1.jpg" alt="drawing" width="800"/>
 
 Explorer is connected to the university network over 10 Gbps Ethernet (GbE) for high-speed data transfer, and Explorer provides 6 PB of available storage on a high-performance file system. Compute nodes are connected with either 10 GbE or high data rate InfiniBand (200 Gbps or 100 Gbps), supporting all types and scales of computational workloads.
 
@@ -60,11 +60,11 @@ There are two ways to work on the Explroer cluster:
 
 A) The Terminal:
 
-<img src="Screenshotexplorer.png" alt="drawing" width="400"/>
+<img src="images/Screenshotexplorer.png" alt="drawing" width="400"/>
 
 B) Or the Open on Demand website:
 
-<img src="screenshot_OOD.png" alt="drawing" width="400"/>
+<img src="images/screenshot_OOD.png" alt="drawing" width="400"/>
 
 We will cover both throughout this presentation. More information can be found in our [documentation](https://rc-docs.northeastern.edu/en/latest/connectingtocluster/index.html) which also shows you how to setup password-less ssh.
 
@@ -84,7 +84,7 @@ ssh s.caplins@login.explorer.northeastern.edu
 
 You will then be prompted to enter a password. Type your Northeastern password and press Enter. Note that the cursor does not move as you type your password. This is expected behavior.
 
-<img src="Screenshotexplorer.png" alt="drawing" width="400" class="center"/>
+<img src="images/Screenshotexplorer.png" alt="drawing" width="400" class="center"/>
 
 #### On Windows
 
@@ -111,7 +111,7 @@ Where you will be prompted to enter your northeastern username and password and 
 
 You will then see the OOD dashboard:
 
-<img src="screenshot_OOD.png" alt="drawing" width="400"/>
+<img src="images/screenshot_OOD.png" alt="drawing" width="400"/>
 
 You're now on the cluster!
 
@@ -136,7 +136,7 @@ Below is an example output of the command `ls` which we can use to list the cont
 
 In `/home` and `/projects`:
 
-<img src="screenshot_myhome.png" alt="drawing" width="400"/>
+<img src="images/screenshot_myhome.png" alt="drawing" width="400"/>
 
 ## Transfering Data
 
@@ -208,19 +208,19 @@ scp testfile.txt s.caplins@xfer.discovery.neu.edu:/projects/rc/s.caplins
 
 Login to the Open OnDemand website: <https://ood.explorer.northeastern.edu>
 
-<img src="screenshot_OOD.png" alt="drawing" width="400" class="center"/>
+<img src="images/screenshot_OOD.png" alt="drawing" width="400" class="center"/>
 
 Navigate to the `Files` tab on the left-hand side. And select `Home Directory`
 
-<img src="screenshot_files1.png" alt="drawing" width="400" class="center"/>
+<img src="images/screenshot_files1.png" alt="drawing" width="400" class="center"/>
 
 From the files application you are automatically put in your `/home` directory, but there is an option to change the directory if you want to put it in `/scratch` or `/projects`
 
-<img src="screenshot_files2.png" alt="drawing" width="400" class="center"/>
+<img src="images/screenshot_files2.png" alt="drawing" width="400" class="center"/>
 
 If you select upload a popup window will open and you can choose to browse files or drop files there.
 
-<img src="screenshot_files3.png" alt="drawing" width="400" class="center"/>
+<img src="images/screenshot_files3.png" alt="drawing" width="400" class="center"/>
 
 > The files application is limited to transferes of 10 GB. If you have larger files use scp or for very large files/datasets we recommend you use [Globus](https://rc-docs.northeastern.edu/en/latest/datamanagement/globus.html#using-globus)
 
@@ -232,7 +232,7 @@ You can also easily download any file from the cluster to your personal machine 
 
 Now that you can transfer data to the cluster, let's discuss running jobs. So far we have used the login nodes and the xfer transer nodes, but to do larger computational tasks we should learn how to get on a compute node.
 
-<img src="testwhite.svg" alt="drawing" width="400"/>
+<img src="images/testwhite.svg" alt="drawing" width="400"/>
 
 > Please don't run scientific software, transfer large files, or carry out computations on the login nodes. Login node traffic can acculate and slow down the whole system for all users.
 
@@ -336,17 +336,16 @@ On the Open OnDemand website interactive jobs are really streamlined and the pro
 
 For example, for Rstudio we fill in the version we want, the partition, the time, cpus, and memory.
 
-<img src="screenshot_rstudio.png" alt="drawing" width="400"/>
+<img src="images/screenshot_rstudio.png" alt="drawing" width="400"/>
 
 We can leave the options as they are and select `Launch`.
 You will see the application move from `Queued` to `Starting` to `Running`.
 
-<img src="screenshot_rstudio3.png" alt="drawing" width="400"/>
+<img src="images/screenshot_rstudio3.png" alt="drawing" width="400"/>
 
 The time you selected in the form starts when the application is running.
 
-> Cancel applications when you are done with them as this frees up the node for another user!
-
+> Cancel applications when you are done with them as this free's up the node for another user!
 
 ## Running non-interactive jobs (sbatch)
 
@@ -412,11 +411,11 @@ squeue -u s.caplins --start
 
 On the OOD you can check running jobs via the tab labeled `My Interactive Sessions` or by the `Jobs` tab and selecting `Active Jobs`
 
-<img src="screenshot_jobs.png" alt="drawing" width="400"/>
+<img src="images/screenshot_jobs.png" alt="drawing" width="400"/>
 
 From `My Interactive Sessions` you can also see some helpful information about your job, which we also saw in the `squeue -u username` output.
 
-<img src="screenshot_jobs2" alt="drawing" width="400"/>
+<img src="images/screenshot_jobs2" alt="drawing" width="400"/>
 
 The information here can be helpful for debugging if something doesn't work as expected and can be given to the RC team if you run into an issue.
 
@@ -457,6 +456,8 @@ Come to [office hours](https://rc.northeastern.edu/getting-help/) hosted on Zoom
 Or [book a consultation](https://rc.northeastern.edu/getting-help/) with an RC team member.
 
 Review our [Documentation](https://rc-docs.northeastern.edu/en/latest/index.html).
+
+Thank you!
 
 ---
 
