@@ -57,11 +57,11 @@ There are two ways to work on the Explroer cluster:
 
 A) The Terminal:
 
-<img src="images/Screenshotexplorer.png" alt="drawing" width="400"/>
+<img src="images/Screenshotexplorer.png" alt="drawing" width="800"/>
 
 B) Or the Open on Demand website:
 
-<img src="images/screenshot_OOD.png" alt="drawing" width="400"/>
+<img src="images/screenshot_OOD.png" alt="drawing" width="800"/>
 
 We will cover both throughout this presentation. More information can be found in our [documentation](https://rc-docs.northeastern.edu/en/latest/connectingtocluster/index.html) which also shows you how to setup password-less ssh.
 
@@ -81,7 +81,7 @@ ssh s.caplins@login.explorer.northeastern.edu
 
 You will then be prompted to enter a password. Type your Northeastern password and press Enter. Note that the cursor does not move as you type your password. This is expected behavior.
 
-<img src="images/Screenshotexplorer.png" alt="drawing" width="400" class="center"/>
+<img src="images/Screenshotexplorer.png" alt="drawing" width="800" class="center"/>
 
 #### On Windows
 
@@ -108,7 +108,7 @@ Where you will be prompted to enter your northeastern username and password and 
 
 You will then see the OOD dashboard:
 
-<img src="images/screenshot_OOD.png" alt="drawing" width="400"/>
+<img src="images/screenshot_OOD.png" alt="drawing" width="800"/>
 
 You're now on the cluster!
 
@@ -133,7 +133,7 @@ Below is an example output of the command `ls` which we can use to list the cont
 
 In `/home` and `/projects`:
 
-<img src="images/screenshot_myhome.png" alt="drawing" width="400"/>
+<img src="images/screenshot_myhome.png" alt="drawing" width="800"/>
 
 ## Transfering Data
 
@@ -205,19 +205,19 @@ scp testfile.txt s.caplins@xfer.discovery.neu.edu:/projects/rc/s.caplins
 
 Login to the Open OnDemand website: <https://ood.explorer.northeastern.edu>
 
-<img src="images/screenshot_OOD.png" alt="drawing" width="400" class="center"/>
+<img src="images/screenshot_OOD.png" alt="drawing" width="800" class="center"/>
 
 Navigate to the `Files` tab on the left-hand side. And select `Home Directory`
 
-<img src="images/screenshot_files1.png" alt="drawing" width="400" class="center"/>
+<img src="images/screenshot_files1.png" alt="drawing" width="800" class="center"/>
 
 From the files application you are automatically put in your `/home` directory, but there is an option to change the directory if you want to put it in `/scratch` or `/projects`
 
-<img src="images/screenshot_files2.png" alt="drawing" width="400" class="center"/>
+<img src="images/screenshot_files2.png" alt="drawing" width="800" class="center"/>
 
 If you select upload a popup window will open and you can choose to browse files or drop files there.
 
-<img src="images/screenshot_files3.png" alt="drawing" width="400" class="center"/>
+<img src="images/screenshot_files3.png" alt="drawing" width="800" class="center"/>
 
 > The files application is limited to transferes of 10 GB. If you have larger files use scp or for very large files/datasets we recommend you use [Globus](https://rc-docs.northeastern.edu/en/latest/datamanagement/globus.html#using-globus)
 
@@ -229,7 +229,7 @@ You can also easily download any file from the cluster to your personal machine 
 
 Now that you can transfer data to the cluster, let's discuss running jobs. So far we have used the login nodes and the xfer transer nodes, but to do larger computational tasks we should learn how to get on a compute node.
 
-<img src="images/testwhite.svg" alt="drawing" width="400"/>
+<img src="images/testwhite.svg" alt="drawing" width="800"/>
 
 > Please don't run scientific software, transfer large files, or carry out computations on the login nodes. Login node traffic can acculate and slow down the whole system for all users.
 
@@ -333,12 +333,12 @@ On the Open OnDemand website interactive jobs are really streamlined and the pro
 
 For example, for Rstudio we fill in the version we want, the partition, the time, cpus, and memory.
 
-<img src="images/screenshot_rstudio.png" alt="drawing" width="400"/>
+<img src="images/screenshot_rstudio.png" alt="drawing" width="800"/>
 
 We can leave the options as they are and select `Launch`.
 You will see the application move from `Queued` to `Starting` to `Running`.
 
-<img src="images/screenshot_rstudio3.png" alt="drawing" width="400"/>
+<img src="images/screenshot_rstudio3.png" alt="drawing" width="800"/>
 
 The time you selected in the form starts when the application is running.
 
@@ -408,11 +408,11 @@ squeue -u s.caplins --start
 
 On the OOD you can check running jobs via the tab labeled `My Interactive Sessions` or by the `Jobs` tab and selecting `Active Jobs`
 
-<img src="images/screenshot_jobs.png" alt="drawing" width="400"/>
+<img src="images/screenshot_jobs.png" alt="drawing" width="800"/>
 
 From `My Interactive Sessions` you can also see some helpful information about your job, which we also saw in the `squeue -u username` output.
 
-<img src="images/screenshot_jobs2.png" alt="drawing" width="400"/>
+<img src="images/screenshot_jobs2.png" alt="drawing" width="800"/>
 
 The information here can be helpful for debugging if something doesn't work as expected and can be given to the RC team if you run into an issue.
 
