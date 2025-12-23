@@ -1,6 +1,3 @@
----
-
----
 # Research Computing Training
 
 <img src="images/ac-grid-5-red.svg" alt="drawing" width="900"/>
