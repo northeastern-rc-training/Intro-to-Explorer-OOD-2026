@@ -415,7 +415,7 @@ On the OOD you can check running jobs via the tab labeled `My Interactive Sessio
 
 From `My Interactive Sessions` you can also see some helpful information about your job, which we also saw in the `squeue -u username` output.
 
-<img src="images/screenshot_jobs2" alt="drawing" width="400"/>
+<img src="images/screenshot_jobs2.png" alt="drawing" width="400"/>
 
 The information here can be helpful for debugging if something doesn't work as expected and can be given to the RC team if you run into an issue.
 
