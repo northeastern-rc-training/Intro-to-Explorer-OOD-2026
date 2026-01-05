@@ -8,7 +8,7 @@ Welcome to the Research Computing Spring 2026 training series. In this training 
 
 Today this presentation will cover:
 
-1. What is an HPC
+1. [What is an HPC](## What is an HPC?)
 2. The Explorer cluster
 3. Logging in
 4. File Paths
