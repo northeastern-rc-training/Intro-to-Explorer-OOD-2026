@@ -4,7 +4,7 @@
 
 ## Introduction to Explorer and the OOD
 
-Welcome to the Research Computing Spring 2026 training series. In this training we will be learning more about the Explorer cluster, what is it and how to use it. We also include an introduction to the Open OnDemand website, which provides an interactive way to access Explorer.
+Welcome to the Research Computing Spring 2026 training series. In this training we will be learning more about the Explorer cluster, what is it and how to use it. We also include an introduction to the Open OnDemand (OOD) website, which provides an interactive way to access Explorer.
 
 Today this presentation will cover:
 
@@ -59,7 +59,7 @@ A) The Terminal:
 
 <img src="images/Screenshotexplorer.png" alt="drawing" width="800"/>
 
-B) Or the Open on Demand website:
+B) Or the Open OnDemand (OOD) website:
 
 <img src="images/screenshot_OOD.png" alt="drawing" width="800"/>
 
