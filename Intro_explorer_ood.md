@@ -53,7 +53,7 @@ You can apply for access via our [classroom access form]([https://bit.ly/NURC-Cl
 
 ## How to access Explorer
 
-There are two ways to work on the Explroer cluster:
+There are two ways to work on the Explorer cluster:
 
 A) The Terminal:
 
