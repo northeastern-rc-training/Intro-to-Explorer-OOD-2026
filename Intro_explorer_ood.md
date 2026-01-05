@@ -9,13 +9,13 @@ Welcome to the Research Computing Spring 2026 training series. In this training 
 Today this presentation will cover:
 
 1. [What is an HPC](#what-is-an-HPC?)
-2. The Explorer cluster
-3. Logging in
-4. File Paths
-5. Transfering data
-6. Running jobs
-7. Software
-8. How to get help
+2. [The Explorer cluster](#what-is-explorer)
+3. [Logging in](#logging-in-via-the-terminal)
+4. [File Paths](#welcome-to-file-paths)
+5. [Transfering data](#transfering-data)
+6. [Running jobs](#running-jobs)
+7. [Software](#software)
+8. [How to get help](#how-to-get-help)
 
 ## What is an HPC?
 
