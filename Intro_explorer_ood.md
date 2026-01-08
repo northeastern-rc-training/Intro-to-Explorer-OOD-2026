@@ -157,13 +157,37 @@ You can access the data from any path that you have the correct permissions to. 
 
 A path to a directory:
 ```bash
-/projects/seedpod/rawdata
+ls /projects/seedpod/rawdata
+```
+
+```result
+bam_lists
+bam_lists.tar.gz
+Chr_genome_final_gene.gff3
+feems
+feems_grids
+id.txt
+metadata
+nursery_samples.txt
+outer_coordinates_spal.csv
+population_files
+spal
+spal_barcodes.txt
+spal_merged.txt
+spal_only_barcodes.txt
+sppa
+sppa_barcodes.txt
+sppa_barcode.txt
 ```
 
 or a path to a specific file:
 
 ```bash
-/home/s.caplins/myveryimportantscript.sh
+cat /home/s.caplins/myveryimportantscript.sh
+```
+
+```result
+.~*~. Have a wonderful day! .~*~.
 ```
 
 ### Transfer a file on the terminal with `scp`
