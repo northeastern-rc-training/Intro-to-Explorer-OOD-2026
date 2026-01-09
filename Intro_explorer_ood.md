@@ -199,7 +199,6 @@ First example: files on your laptop or personal computer using the terminal comm
 Let's create a small test file to transfer to the cluster
 
 ```bash
-touch testfile.txt
 echo "hello from the Explorer cluster" > testfile.txt
 ```
 
@@ -265,7 +264,7 @@ The command `srun` is a slurm command and it has several parameters that allow y
 
 There are also defaults set so you can quickly access a node when needed.
 
-This is the most simple command that you can run to get a compute node from the terminal. This can only be run from a login node.
+This is the most simple command that you can run to get a compute node from the terminal. *This can only be run from a login node.*
 
 ```bash
 srun --pty bash
@@ -386,9 +385,17 @@ Heres an example sbatch script for CPU resources:
 #SBATCH --mail-user=s.caplins@northeastern.edu  
 #SBATCH --mail-type=ALL                    
 
-# Your program/command here
+# load required software
 
-./my_program
+module load anaconda3/2024.06
+
+source activate /home/s.caplins/.conda/envs/test
+
+# run specific commands here
+
+echo "You are doing great!"
+
+python --version
 ```
 
 You would save this file with the ending `.sh` and then run it on the cluster with the command `sbatch`:
@@ -396,6 +403,10 @@ You would save this file with the ending `.sh` and then run it on the cluster wi
 ```bash
 sbatch myjob.sh
 ```
+```result
+Submitted batch job 3719393
+```
+
 You will see a number output which is the slurm job id. This id is usefull as it tracks information about your job as it runs on the cluster.
 
 When slurm starts running your job it will output a slurm-jobid.out output file. This file contains all the information that was output when your job was running and if very useful to see if the job ran properly and if the expected output was obtained.
@@ -403,7 +414,16 @@ When slurm starts running your job it will output a slurm-jobid.out output file.
 You can read the slurm-jobid.out in the files app or by using the command `less` in terminal:
 
 ```bash
-less slurm-XXXX.out
+cat slurm-3719393.out
+```
+```result
+You are doing great!
+Python 3.12.4
+```
+You can also use the command `less` to view and read files (even g.zipped files):
+
+```bash
+less slurm-3719393.out
 ```
 
 Type `q` to quit less. There are many fun [shortcuts for less](https://man7.org/linux/man-pages/man1/less.1.html).
@@ -418,10 +438,20 @@ On the terminal we can run a few simple commands to check our queue. Of course s
 squeue -u s.caplins
 ```
 
+```result
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           3718152     short ood-desk s.caplin  R      45:06      1 c0690
+           3719477     short     bash s.caplin  R       0:59      1 c0690
+```
+
  You can even check how busy a queue is, which is sometimes helpful if you notice it taking longer than normal for your job to run.
 
 ```bash
-squeue -p short
+squeue -p short | wc -l
+```
+
+```result
+518
 ```
 
 By adding the `--start` flag to see when your job is predicted to start.
@@ -461,7 +491,7 @@ module avail
 You can load a module of your choosing with:
 
 ```bash
-module load name/version
+module load anaconda3/2024.06
 ```
 
 Where you mantain the case that was output in `module avail`.
