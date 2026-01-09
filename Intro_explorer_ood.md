@@ -4,18 +4,18 @@
 
 ## Introduction to Explorer and the OOD
 
-Welcome to the Research Computing Spring 2026 training series. In this training we will be learning more about the Explorer cluster, what is it and how to use it. We also include an introduction to the Open OnDemand website, which provides an interactive way to access Explorer.
+Welcome to the Research Computing Spring 2026 training series. In this training we will be learning more about the Explorer cluster, what is it and how to use it. We also include an introduction to the Open OnDemand (OOD) website, which provides an interactive way to access Explorer.
 
 Today this presentation will cover:
 
-1. What is an HPC
-2. The Explorer cluster
-3. Logging in
-4. File Paths
-5. Transfering data
-6. Running jobs
-7. Software
-8. How to get help
+1. [What is an HPC](#what-is-an-HPC?)
+2. [The Explorer cluster](#what-is-explorer)
+3. [Logging in](#logging-in-via-the-terminal)
+4. [File Paths](#welcome-to-file-paths)
+5. [Transfering data](#transfering-data)
+6. [Running jobs](#running-jobs)
+7. [Software](#software)
+8. [How to get help](#how-to-get-help)
 
 ## What is an HPC?
 
@@ -59,7 +59,7 @@ A) The Terminal:
 
 <img src="images/Screenshotexplorer.png" alt="drawing" width="800"/>
 
-B) Or the Open on Demand website:
+B) Or the Open OnDemand (OOD) website:
 
 <img src="images/screenshot_OOD.png" alt="drawing" width="800"/>
 
