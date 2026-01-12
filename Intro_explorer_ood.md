@@ -27,7 +27,7 @@ Researchers and students can login to the HPC via a login node. On the login nod
 
 ## What is Explorer?
 
-Explorer is Northeastern's HPC system and is managed by the Research Computing team. Explorer supercedes the Discovery cluster. We have 45,000 CPU cores and over 525 GPUs available to all Northeastern faculty and students free of charge. The Explorer cluster is loacated at the [Massachusetts Green High Performance Computing Center](https://www.mghpcc.org/) (MGHPCC) in Holyoke, MA.
+Explorer is Northeastern's HPC system and is managed by the Research Computing team. Explorer supercedes the Discovery cluster. We have 45,000 CPU cores and over 525 GPUs available to all Northeastern faculty and students free of charge. The Explorer cluster is located at the [Massachusetts Green High Performance Computing Center](https://www.mghpcc.org/) (MGHPCC) in Holyoke, MA.
 
 <img src="images/MGHPCC-1.jpg" alt="drawing" width="800"/>
 
