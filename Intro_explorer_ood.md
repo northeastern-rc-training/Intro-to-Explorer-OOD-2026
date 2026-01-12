@@ -540,9 +540,15 @@ You can load a module of your choosing with:
 module load anaconda3/2024.06
 ```
 
-Where you mantain the case that was output in `module avail`.
+Where you maintain the case that was output in `module avail`.
 
 > We do not recommend loading modules automatically by adding the module load command to your .bashrc (A hidden file in your `/home`). As this can interfer with the OOD and it makes scientific reproducibility more challengening.
+
+The Anaconda package manager can be used to create conda environments which can house many different types of scientific software and is not limited to python packages. We have guides on using [conda on Explorer](https://rc-docs.northeastern.edu/en/latest/software/packagemanagers/conda.html#conda) and we have several training videos for [classroom or reseach use of conda](https://rc.northeastern.edu/training/).
+
+We also support [running containers on the cluster](https://rc-docs.northeastern.edu/en/latest/containers/index.html).
+
+And installing [software from source code](https://rc-docs.northeastern.edu/en/latest/software/fromsource/index.html). 
 
 ## How to get help
 
