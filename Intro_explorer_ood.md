@@ -2,6 +2,12 @@
 
 <img src="images/ac-grid-5-red.svg" alt="drawing" width="900"/>
 
+## Presentor
+
+Serena Caplins
+Associate Bioinformatician
+Research Computing
+
 ## Introduction to Explorer and the OOD
 
 Welcome to the Research Computing Spring 2026 training series. In this training we will be learning more about the Explorer cluster, what is it and how to use it. We also include an introduction to the Open OnDemand (OOD) website, which provides an interactive way to access Explorer.
