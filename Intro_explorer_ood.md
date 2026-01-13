@@ -74,6 +74,8 @@ B) Or the Open OnDemand (OOD) website:
 
 We will cover both throughout this presentation. More information can be found in our [documentation](https://rc-docs.northeastern.edu/en/latest/connectingtocluster/index.html) which also shows you how to setup password-less ssh.
 
+> We highly recommend developing some comfort in using the terminal!
+
 ### Logging in via the Terminal
 
 ---
