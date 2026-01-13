@@ -57,7 +57,8 @@ If your lab does not yet have a storage space, one can be requested in the [stor
 
 *For Classroom Accounts:*
 
-You can apply for access via our [classroom access form]([https://bit.ly/NURC-Classroom](https://bit.ly/NURC-Classroom)). [Note the classroom access form can only be filled out by the instructor.] Please see our [documentation on classroom resources](https://rc-docs.northeastern.edu/en/latest/classroom/index.html) for more.
+You can apply for access via our [classroom access form]([https://bit.ly/NURC-Classroom](https://bit.ly/NURC-Classroom)). 
+> Note the classroom access form can only be filled out by the instructor. Please see our [documentation on classroom resources](https://rc-docs.northeastern.edu/en/latest/classroom/index.html) for more.
 
 ## How to access Explorer
 
