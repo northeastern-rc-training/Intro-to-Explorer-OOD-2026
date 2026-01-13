@@ -12,7 +12,7 @@ Associate Bioinformatician
 
 ## Introduction to Explorer and the OOD
 
-Welcome to the [Research Computing Spring 2026 Training Series](https://rc.northeastern.edu/research-computing-spring-training/). In this training we will be learning more about the Explorer cluster, what is it and how to use it. We also include an introduction to the Open OnDemand (OOD) website, which provides an interactive way to access Explorer.
+Welcome to the [Research Computing Spring 2026 Training Series](https://rc.northeastern.edu/research-computing-spring-training/)! In this training we will be learning more about the Explorer cluster, what is it and how to use it. We also include an introduction to the Open OnDemand (OOD) website, which provides an interactive way to access Explorer.
 
 Today this presentation will cover:
 
