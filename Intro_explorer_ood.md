@@ -5,8 +5,10 @@
 ## Presentor
 
 Serena Caplins
+
 Associate Bioinformatician
-Research Computing
+
+[Research Computing](https://rc.northeastern.edu/research-computing-team/)
 
 ## Introduction to Explorer and the OOD
 
