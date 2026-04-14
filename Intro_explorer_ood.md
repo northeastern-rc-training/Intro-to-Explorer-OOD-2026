@@ -125,7 +125,7 @@ You will then see the OOD dashboard:
 
 ## Welcome to file paths
 
-Now that you are on the cluster we should talk about files paths. You will learn more about these in our [Intro to Linux training session](https://rc.northeastern.edu/calendar_event/intro-to-linux/) (Feb 24th at 11 AM EST). but it's worth discussing a little now.
+Now that you are on the cluster we should talk about files paths. You will learn more about these in our [Intro to Linux training session](https://rc.northeastern.edu/calendar_event/intro-to-linux/) (There is a recording available). but it's worth discussing a little now.
 
 All users have read and write access to these spaces on the cluser:
 
